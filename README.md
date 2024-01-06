@@ -1,4 +1,4 @@
-This is a root/flash/unbrick guide for Nubia devices i have laying around and comes with absolutely no warranty. 
+This is a root/flash/unbrick guide for Nubia devices i have laying around and comes with absolutely no warranty.  
 The steps are partially tested, partially recreated from what i remember worked for me, use at your own risk.
 
 # Prepare
