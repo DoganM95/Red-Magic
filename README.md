@@ -97,3 +97,14 @@ https://forum.xda-developers.com/t/root-redmagic-8s-pro.4617049/
 - A patched image will be located in /Download, transfer that to the host pc
 - `fastboot flash init_boot ./magisk_patched_something.img` will flash it to the currently active slot
 - `fastboot reboot`
+
+## Trouvleshooting
+
+### Connection issues
+If your fastboot recognizes your device on `fastboot devices` but fails to flash anything like this:
+```
+PS C:\Red Magic 8 Pro\Root> fastboot flash init_boot .\init_boot_4_28_magisk_patched.img
+Sending 'init_boot_a' (8192 KB)                    FAILED (Write to device failed in SendBuffer() (no link))
+fastboot: error: Command failed
+```
+Then check your cable and try using the red usb c cable that came with the phone.
