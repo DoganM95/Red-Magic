@@ -46,7 +46,16 @@ The steps are partially tested, partially recreated from what i remember worked 
 
 If you already rooted your device just to realize the fingerprint scanner & lockscreen doesn't work anymore or  
 if you want to root a stock device, follow this guide on XDA:  
-https://forum.xda-developers.com/t/root-redmagic-8s-pro.4617049/  
+[https://forum.xda-developers.com/t/root-redmagic-8s-pro.4617049/  ](https://xdaforums.com/t/what-worked-for-me-working-lockscreen-after-unlocking-rooting.4559909/)
+
+## Unlock the bootloader
+As mentioned above, unlocking with a password/pin/fingerprint will break the lockscreen afterwards, but not irreversibly. 
+However, to make sure everything works while onlocking, make sure to remove all of these (or simply do a factory reset). Summed up:
+- Have a locked bootloader
+- Remove any protection (pin/password/fingerprint) by e.g. doing a factory reset (Power + Volume down, until recovery shows up)
+- Get into fastboot mode using `adb reboot bootloader`, phone will say *Fastboot mode*
+- Unlock the booatloader using `fastboot flashing unlock`
+- And the "critical" one using `fastboot flashing unlock_critical` 
 
 ## Get Phone status
 
