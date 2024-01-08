@@ -42,21 +42,6 @@ The steps are partially tested, partially recreated from what i remember worked 
 - Put the init.boot.img on said phone
 - Click patch manually and choose that init_boot.img
 
-## Root with working fingerprint etc.
-
-If you already rooted your device just to realize the fingerprint scanner & lockscreen doesn't work anymore or  
-if you want to root a stock device, follow this guide on XDA:  
-[https://forum.xda-developers.com/t/root-redmagic-8s-pro.4617049/  ](https://xdaforums.com/t/what-worked-for-me-working-lockscreen-after-unlocking-rooting.4559909/)
-
-## Unlock the bootloader
-As mentioned above, unlocking with a password/pin/fingerprint will break the lockscreen afterwards, but not irreversibly. 
-However, to make sure everything works while onlocking, make sure to remove all of these (or simply do a factory reset). Summed up:
-- Have a locked bootloader
-- Remove any protection (pin/password/fingerprint) by e.g. doing a factory reset (Power + Volume down, until recovery shows up)
-- Get into fastboot mode using `adb reboot bootloader`, phone will say *Fastboot mode*
-- Unlock the booatloader using `fastboot flashing unlock`
-- And the "critical" one using `fastboot flashing unlock_critical` 
-
 ## Get Phone status
 
 - Boot phone into fastboot by holding `power + vol down` keys until a screen with text appears
@@ -88,25 +73,6 @@ However, to make sure everything works while onlocking, make sure to remove all 
 - `adb sideload .\NX729J-update.zip` will upload and flash the OTA
 - 
 
-<!-- ### Flashing partitions (not quick but clean way)
-
-- Run FastbootEnhance.exe
-- Double click the recognized fastboot device
-- Click *Reboot to fastbootd*
-- The phone will show a white screen for a whilem then yellow and blue text (=fastbootd)
-- Click Flash Payload.bin
-- A warning will appear, click yes and wait for the flashing to finish
-- Slot is now repaired and bootable -->
-
-## Rooting (flash a patched magisk boot image)
-
-- Install and open Magisk app on your or any working android phonw
-- Upload the init_boot.img to said phone
-- Choose patch image and choose the init_noot.img
-- A patched image will be located in /Download, transfer that to the host pc
-- `fastboot flash init_boot ./magisk_patched_something.img` will flash it to the currently active slot
-- `fastboot reboot`
-
 ## Trouvleshooting
 
 ### Connection issues
@@ -117,3 +83,49 @@ Sending 'init_boot_a' (8192 KB)                    FAILED (Write to device faile
 fastboot: error: Command failed
 ```
 Then check your cable and try using the red usb c cable that came with the phone.
+
+# Red Magic 8 Pro
+
+<!-- ### Flashing partitions (not quick but clean way)
+
+- Run FastbootEnhance.exe
+- Double click the recognized fastboot device
+- Click *Reboot to fastbootd*
+- The phone will show a white screen for a whilem then yellow and blue text (=fastbootd)
+- Click Flash Payload.bin
+- A warning will appear, click yes and wait for the flashing to finish
+- Slot is now repaired and bootable -->
+
+## Unlocking the bootloader
+
+Red Magic 8 Pro seems to be the last of the series with an unlockable bootloader, by following
+- Backup any data on your phone, it will be wiped and all data will be gone
+- Developer options -> turn allow OEM unlock on 
+- `adb reboot bootloader` -> You're now in fastboot mode
+- `fastboot flaching unlock`
+- `fastboot flashing unlock_critical`
+
+## Rooting (flash a patched magisk boot image)
+
+- Install and open Magisk app on your or any working android phonw
+- Upload the init_boot.img to said phone
+- Choose patch image and choose the init_noot.img
+- A patched image will be located in /Download, transfer that to the host pc
+- `fastboot flash init_boot ./magisk_patched_something.img` will flash it to the currently active slot
+- `fastboot reboot`
+
+## Root with working fingerprint etc.
+
+If you already rooted your device just to realize the fingerprint scanner & lockscreen doesn't work anymore or  
+if you want to root a stock device, follow this guide on XDA:  
+[https://forum.xda-developers.com/t/root-redmagic-8s-pro.4617049/  ](https://xdaforums.com/t/what-worked-for-me-working-lockscreen-after-unlocking-rooting.4559909/)
+
+## Unlock the bootloader
+As mentioned above, unlocking with a password/pin/fingerprint will break the lockscreen afterwards, but not irreversibly. 
+However, to make sure everything works while onlocking, make sure to remove all of these (or simply do a factory reset). Summed up:
+- Have a locked bootloader
+- Remove any protection (pin/password/fingerprint) by e.g. doing a factory reset (Power + Volume down, until recovery shows up)
+- Get into fastboot mode using `adb reboot bootloader`, phone will say *Fastboot mode*
+- Unlock the booatloader using `fastboot flashing unlock`
+- And the "critical" one using `fastboot flashing unlock_critical`
+
