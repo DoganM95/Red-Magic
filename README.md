@@ -42,6 +42,8 @@ The steps are partially tested, partially recreated from what i remember worked 
 - Put the init.boot.img on said phone
 - Click patch manually and choose that init_boot.img
 
+# Red Magic (general)
+
 ## Get Phone status
 
 - Boot phone into fastboot by holding `power + vol down` keys until a screen with text appears
