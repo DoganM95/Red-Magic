@@ -6,10 +6,10 @@ The steps are partially tested, partially recreated from what i remember worked 
 ## Download tools
 
 - Download the factory firmware (see repo files for links)
-- Download fastboot enhance from https://github.com/libxzr/FastbootEnhance
-- Download the latest adb/fastboot executables from https://developer.android.com/tools/releases/platform-tools
-- Download PathAdder (makes terminal commands easier) from https://github.com/DoganM95/AddToPath-Context-Entry-Windows
-- Download the magisk app from https://github.com/topjohnwu/Magisk
+- Download [fastboot enhance](https://github.com/libxzr/FastbootEnhance)
+- Download [adb/fastboot executables](https://developer.android.com/tools/releases/platform-tools)
+- Download [pathAdder](https://github.com/DoganM95/AddToPath-Context-Entry-Windows) (makes terminal commands easier)
+- Download [magisk app](https://github.com/topjohnwu/Magisk)
 
 ## Getting fastboot drivers ready
 
