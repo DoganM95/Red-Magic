@@ -3,22 +3,21 @@ The steps are partially tested, partially recreated from what i remember worked 
 
 # Prepare
 
-## Download files (if not done already)
-- Download the factory firmware from https://help.redmagic.gg/hc/en-us/articles/15828163597593-REDMAGIC-8-Pro  
+## Download tools
+
+- Download the factory firmware (see repo files for links)
 - Download fastboot enhance from https://github.com/libxzr/FastbootEnhance
 - Download the latest adb/fastboot executables from https://developer.android.com/tools/releases/platform-tools
 - Download PathAdder (makes terminal commands easier) from https://github.com/DoganM95/AddToPath-Context-Entry-Windows
 - Download the magisk app from https://github.com/topjohnwu/Magisk
 
-## Prepare host pc
+## Getting fastboot drivers ready
 
-### Getting fastboot device ready
-
-- Boot phone into fastboot by holding `power + vol down` keys until a screen with text appears
+- Boot (any) phone into fastboot by holding `power + vol down` keys until a screen with text appears
 - Go to device manager in windows, you will see an unknown *Android Device*
 - Right click it -> update driver -> browse my pc -> let me pick -> Android -> Android Bootloader Interface
 
-### Extracting the partitions
+## Extracting the partitions
 
 - Extract payload.bin from the factory zip
 - Open FastbootEnhance.exe
@@ -30,17 +29,18 @@ The steps are partially tested, partially recreated from what i remember worked 
   - vendor
 - Click extract image (may take a while, wait for the pop-up)
 
-### Extract fastboot tools
+## Extract fastboot tools
 - Pick a location where the folder can stay permanently
 - Extract the platform-tools.zip there
 - "Install" AddToPath.reg by double clicking it
 - Right click the extracted adb folder and `Add To Path`
 - Now you can just run adb and fastboot from anywhere 
 
-### Create magisk patched boot
+## Create magisk patched boot
 - Install Magisk.apk on your or any other phone
-- Put the init.boot.img on said phone
+- Put the init_boot.img on said phone
 - Click patch manually and choose that init_boot.img
+- Copy the magick_patched_filename.img to pc
 
 # Red Magic (general)
 
@@ -58,8 +58,9 @@ The steps are partially tested, partially recreated from what i remember worked 
 ## Unbricking the device
 
 - Boot phone into fastboot by holding `power + vol down` keys until a screen with text appears
+- Follow one of the next two methods
 
-### Switching slots (Quick and dirty way)
+### Switching slots (quick and dirty way)
 
 - `fastboot getvar all`
 - Check if the slot you are not on is 
@@ -68,14 +69,14 @@ The steps are partially tested, partially recreated from what i remember worked 
 - `fastboot --set-active=<slot_you_are_not_on>` and replace `<slot_you_are_not_on>` with `a` or `b`
 - Phone should boot successfully into the switched slot, but now the other slot will be broken and it is recommended to fix it
 
-### Flashing an OTA (Sideload)
+### Flashing an OTA (sideload)
+This may require a factory reset/data wipe afterwards 
 - From Fastboot menu, choose to boot into recovery
 - A white screen will appear with a green button, don't click anything
 - `adb devices` should show a sideload device
 - `adb sideload .\NX729J-update.zip` will upload and flash the OTA
-- 
 
-## Trouvleshooting
+## Troubleshooting 
 
 ### Connection issues
 If your fastboot recognizes your device on `fastboot devices` but fails to flash anything like this:
@@ -100,34 +101,23 @@ Then check your cable and try using the red usb c cable that came with the phone
 
 ## Unlocking the bootloader
 
-Red Magic 8 Pro seems to be the last of the series with an unlockable bootloader, by following
-- Backup any data on your phone, it will be wiped and all data will be gone
+Rooting with a password/pin/fingerprint already set up will break the lockscreen afterwards, but not irreversibly. 
+However, to make sure everything works while unlocking, make sure to remove all of these (or simply do a factory reset). 
+[There is an XDA guide on this](https://xdaforums.com/t/what-worked-for-me-working-lockscreen-after-unlocking-rooting.4559909/)
+Summed up:
+- Backup any data on your phone, it will be wiped
+- Have a locked bootloader
+- Remove any protection (pin/password/fingerprint) by e.g. doing a factory reset (Power + Volume down, until recovery shows up)
 - Developer options -> turn allow OEM unlock on 
-- `adb reboot bootloader` -> You're now in fastboot mode
-- `fastboot flaching unlock`
-- `fastboot flashing unlock_critical`
+- Reboot into fastboot mode using `adb reboot bootloader` 
+- Unlock the booatloader using `fastboot flashing unlock`
+- And the "critical" one using `fastboot flashing unlock_critical`
 
 ## Rooting (flash a patched magisk boot image)
 
-- Install and open Magisk app on your or any working android phonw
+- Install and open Magisk app on your or any working android phone
 - Upload the init_boot.img to said phone
 - Choose patch image and choose the init_noot.img
 - A patched image will be located in /Download, transfer that to the host pc
 - `fastboot flash init_boot ./magisk_patched_something.img` will flash it to the currently active slot
 - `fastboot reboot`
-
-## Root with working fingerprint etc.
-
-If you already rooted your device just to realize the fingerprint scanner & lockscreen doesn't work anymore or  
-if you want to root a stock device, follow this guide on XDA:  
-[https://forum.xda-developers.com/t/root-redmagic-8s-pro.4617049/  ](https://xdaforums.com/t/what-worked-for-me-working-lockscreen-after-unlocking-rooting.4559909/)
-
-## Unlock the bootloader
-As mentioned above, unlocking with a password/pin/fingerprint will break the lockscreen afterwards, but not irreversibly. 
-However, to make sure everything works while onlocking, make sure to remove all of these (or simply do a factory reset). Summed up:
-- Have a locked bootloader
-- Remove any protection (pin/password/fingerprint) by e.g. doing a factory reset (Power + Volume down, until recovery shows up)
-- Get into fastboot mode using `adb reboot bootloader`, phone will say *Fastboot mode*
-- Unlock the booatloader using `fastboot flashing unlock`
-- And the "critical" one using `fastboot flashing unlock_critical`
-
