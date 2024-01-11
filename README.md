@@ -102,8 +102,8 @@ Then check your cable and try using the red usb c cable that came with the phone
 ## Unlocking the bootloader
 
 Rooting with a password/pin/fingerprint already set up will break the lockscreen afterwards, but not irreversibly. 
-However, to make sure everything works while unlocking, make sure to remove all of these (or simply do a factory reset). 
-[There is an XDA guide on this](https://xdaforums.com/t/what-worked-for-me-working-lockscreen-after-unlocking-rooting.4559909/)
+However, to make sure everything works while unlocking, make sure to remove all of these (or simply do a factory reset).  
+[There is an XDA guide on this](https://xdaforums.com/t/what-worked-for-me-working-lockscreen-after-unlocking-rooting.4559909/)  
 Summed up:
 - Backup any data on your phone, it will be wiped
 - Have a locked bootloader
