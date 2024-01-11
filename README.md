@@ -121,3 +121,9 @@ Summed up:
 - A patched image will be located in /Download, transfer that to the host pc
 - `fastboot flash init_boot ./magisk_patched_something.img` will flash it to the currently active slot
 - `fastboot reboot`
+
+# Red Magic 9 Pro
+
+## Unlocking the bootloader
+
+Unlocking the bootloader on this device is (currently?) not possible, as the commands `fastboot flashing unlock` and `fastboot oem unlock` are reported to be unknown by the device in fastboot mode. They probably removed these from the bootloader, but it should be possible to patch the bootloader to know these commands. [There is a reddit post on this](https://www.reddit.com/r/RedMagic/comments/1907rug/). The bootloader was disassembled, probably using ghidra to search for strings and no unlock command was found.
