@@ -30,6 +30,7 @@ The steps are partially tested, partially recreated from what i remember worked 
 - Click extract image (may take a while, wait for the pop-up)
 
 ## Extract fastboot tools
+
 - Pick a location where the folder can stay permanently
 - Extract the platform-tools.zip there
 - "Install" AddToPath.reg by double clicking it
@@ -37,6 +38,7 @@ The steps are partially tested, partially recreated from what i remember worked 
 - Now you can just run adb and fastboot from anywhere 
 
 ## Create magisk patched boot
+
 - Install Magisk.apk on your or any other phone
 - Put the init_boot.img on said phone
 - Click patch manually and choose that init_boot.img
@@ -55,6 +57,18 @@ The steps are partially tested, partially recreated from what i remember worked 
     current-slot:a/b
     ``` 
 
+## Disable any app (user && system)
+
+- Connect phone to PC and open a terminal
+- List packages using `adb shell pm list packages` or filter using
+  - `adb shell pm list packages -s`: To list only system packages.
+  - `adb shell pm list packages -3`: To list only third-party packages.
+  - `adb shell pm list packages -d`: To list only disabled packages.
+  - `adb shell pm list packages -e`: To list only enabled packages.
+  - `adb shell pm list packages [filter]`: To list packages that contain the 'filter' string in their package names.
+- Disable any package using `adb shell pm disable-user --user 0 PACKAGENAME`
+  - Can also disable apps, which are not disbleable in the UI, like crucial system apps, so be cautious
+
 ## Unbricking the device
 
 - Boot phone into fastboot by holding `power + vol down` keys until a screen with text appears
@@ -70,6 +84,7 @@ The steps are partially tested, partially recreated from what i remember worked 
 - Phone should boot successfully into the switched slot, but now the other slot will be broken and it is recommended to fix it
 
 ### Flashing an OTA (sideload)
+
 This may require a factory reset/data wipe afterwards 
 - From Fastboot menu, choose to boot into recovery
 - A white screen will appear with a green button, don't click anything
@@ -79,6 +94,7 @@ This may require a factory reset/data wipe afterwards
 ## Troubleshooting 
 
 ### Connection issues
+
 If your fastboot recognizes your device on `fastboot devices` but fails to flash anything like this:
 ```
 PS C:\Red Magic 8 Pro\Root> fastboot flash init_boot .\init_boot_4_28_magisk_patched.img
