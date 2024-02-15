@@ -103,6 +103,45 @@ fastboot: error: Command failed
 ```
 Then check your cable and try using the red usb c cable that came with the phone.
 
+## Persist custom launcher as default
+
+Nubia's Red Magic 8 Pro has a default launcher bug. You get a third party one, Set it as default launcher and the phone reverts it back to Nubia's launcher randomly.
+The Workaround described here is configuring tasker and Autotools, so the global setting `default_home` is overwritten with the name of the desired launcher in an interval of 1 second. This way, whenever nubia launcher decides to fuck up again and set itself as the default launcher unexpectedly, it will take max 1 second to have your desired launcher as default again. I used this method now for a month and never saw the nubia launcher again.
+
+## Requirements
+- Root permissions
+- Tasker (App)
+- Autotools (App, Tasker Plugin)
+- Termux (App)
+- Lucky Patcher (App), if UI preferred for systemizing an App
+
+## Instructions
+- Install mentioned apps from Requirements
+- Turn Autotools into a system app using either a) or b)
+  (Autotools needs the permission to WRITE_GLOBAL_SETTINGS, which is exclusive to system apps)
+  - a) Open Lucky Patcher, grant root, search for Autotools and turn it into a system app
+  - b) Use Termux to make it a system app by essentially moving it from `data/app` to `system/app` (Google how to do that)
+- Reboot and check if Autotools is now a system app
+- Execute the following commands in Termux:
+  - `su`
+  - `pm grant com.joaomgcd.autotools android.permission.WRITE_GLOBAL_SETTINGS`
+- Open Tasker and create a task, I called mine `OnInterval (Every Second)`
+- Add a new action by clicking (+)
+- Search for `autotools secure settings` and choose it
+- Configure it to use the following data (replace value with your launchers package name):
+```
+Setting Type: Secure
+Name: default_home
+Input Type: String
+Value: com.microsoft.launcher
+Read Setting: true
+```
+
+- Go back and create a new profile, I named mine `OnInterval (Every Second)`
+- As Trigger, choose Event, search for "Tick" and set it to 1000 (Mm, so I lt runs every second)
+- As action, take the one just created 
+- Done
+
 # Red Magic 8 Pro
 
 <!-- ### Flashing partitions (not quick but clean way)
