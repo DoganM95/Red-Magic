@@ -3,8 +3,8 @@ The steps are partially tested, partially recreated from what i remember worked 
 
 Table of contents:
 - [Red Magic (general)](#red-magic-general)
-- [Red Magic 9 Pro specific](#red-magic-9-pro-specific)
-- [Red Magic 8 Pro specific](#red-magic-8-pro-specific)
+- [Red Magic 9 Pro specific](#red-magic-9-pro)
+- [Red Magic 8 Pro specific](#red-magic-8-pro)
 
 # Prepare
 
