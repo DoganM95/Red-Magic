@@ -2,10 +2,10 @@ This is a root/flash/unbrick guide for Nubia devices i have laying around and co
 The steps are partially tested, partially recreated from what i remember worked for me, use at your own risk.
 
 Table of contents:
-- [Red Magic (general)]()
+- [Red Magic (general)](#Red Magic (general))
 - [Red Magic 8 Pro specific]()
 - [Red Magic 8 Pro specific]()
-- 
+
 # Prepare
 
 ## Download tools
