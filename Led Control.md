@@ -93,4 +93,20 @@ setting custom colors for Red Magic 9 Pro's Led's as follows:
 136. all off
 ... all off
 144. fan led only on: yellow, purple, cyan, pink
-145. 
+145. fan led only on: yellow, green
+146. fan led only on: cyna, purple, blue, pink
+147. blue pink
+148. orange, cyan
+149. purple, cyan
+150. blue, cyan
+151. green, yellow
+152. green, yellow
+... green, yellow
+
+160. fan led only on: pink
+161. orange
+162. <fill rest by known pattern>
+168. orange
+
+169. keeps state (no function)
+... keeps state
