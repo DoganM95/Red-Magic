@@ -4,7 +4,7 @@ Changing the value of the global setting `nubia_media_lamp_mode` allows
 setting custom colors for Red Magic 9 Pro's Led's as follows:
 
 - 0: Led's off
-- 8: b-g, u-p, l-b
+- 8: back-green, upper-pink, lower-blue
 - 9: -"- blinks thrice, stays off
 - 10: -"- breathes once, stays off
 - 11: -"-
@@ -45,7 +45,7 @@ setting custom colors for Red Magic 9 Pro's Led's as follows:
 - 62: fan led only on: breathes cyan & blue
 - 63: fan led only on: breathes green & yellow
 - 64: fan led only on: circles pink
-- 
+
 - 33: fan led only on: blinks orange
 - 34: fan led only on: blinks yellow
 - 35: fan led only on: blinks green
@@ -63,4 +63,15 @@ setting custom colors for Red Magic 9 Pro's Led's as follows:
 - 47: fan led only on: blinks green & yellow
 
 - 80: all off
+- 96: back, upper, lower - pink
+- 97: back, upper, lower - orange
+- 98: back, upper, lower - yellow
+- 99: back, upper, lower - green
+- 100: back, upper, lower - cyan
+- <fill rest>
+
+- 104: all off
+- ... all off
+
+- 113: back, upper, lower - breathing orange
 - 
