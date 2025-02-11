@@ -110,3 +110,6 @@ setting custom colors for Red Magic 9 Pro's Led's as follows:
 
 169. keeps state (no function)
 ... keeps state
+
+232. all off
+233. 
