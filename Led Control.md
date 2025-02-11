@@ -19,4 +19,13 @@ setting custom colors for Red Magic 9 Pro's Led's as follows:
 - 36: fan led only on: blinks cyan
 - 37: fan led only on: blinks blue
 - 38: fan led only on: blinks pink
-- 
+- 39: fan led only on: blinks oramge
+- 40: fan led only on: blinks blue & pink
+- 41: fan led only on: blinks cyan & purple
+- 42: fan led only on: blinks cyan & orange
+- 43: fan led only on: blinks blue & pink
+- 44: fan led only on: blinks cyan & purple
+- 45: fan led only on: blinks cyan & orange
+- 46: fan led only on: blinks cyan & blue
+- 47: fan led only on: blinks green & yellow
+- 48: fan led only on: breathes pink
