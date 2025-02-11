@@ -73,5 +73,14 @@ setting custom colors for Red Magic 9 Pro's Led's as follows:
 - 104: all off
 - ... all off
 
+- 112: back, upper, lower - breathing pink
 - 113: back, upper, lower - breathing orange
-- 
+- 114: back, upper, lower - breathing yellow
+- 115: back, upper, lower - breathing green
+- 116: back, upper, lower - breathing cyan
+
+117. back, upper, lower - breathing blue
+118. back, upper, lower - breathing purple
+119. back, upper, lower - breathing orange
+120. all off
+121. 
