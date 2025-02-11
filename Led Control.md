@@ -3,15 +3,15 @@
 Changing the value of the global setting `nubia_media_lamp_mode` allows
 setting custom colors for Red Magic 9 Pro's Led's as follows:
 
-- 0: Led's off
+- 0: Led's all off
 - 8: back-green, upper-pink, lower-blue
 - 9: -"- blinks thrice, stays off
 - 10: -"- breathes once, stays off
 - 11: -"-
 - 12: -"- blinks thrice, stays off
 - 13: -"- breathes once, stays off
-- 14: off
-- ...
+- 14: all off
+- ... all off
 - 32: fan led only on: blinks purple
 - 33: fan led only on: blinks orange
 - 34: fan led only on: blinks yellow
@@ -45,23 +45,21 @@ setting custom colors for Red Magic 9 Pro's Led's as follows:
 - 62: fan led only on: breathes cyan & blue
 - 63: fan led only on: breathes green & yellow
 - 64: fan led only on: circles pink
-
-- 33: fan led only on: blinks orange
-- 34: fan led only on: blinks yellow
-- 35: fan led only on: blinks green
-- 36: fan led only on: blinks cyan
-- 37: fan led only on: blinks blue
-- 38: fan led only on: blinks pink
-- 39: fan led only on: blinks orange
-- 40: fan led only on: blinks blue & pink
-- 41: fan led only on: blinks cyan & purple
-- 42: fan led only on: blinks cyan & orange
-- 43: fan led only on: blinks blue & pink
-- 44: fan led only on: blinks cyan & purple
-- 45: fan led only on: blinks cyan & orange
-- 46: fan led only on: blinks cyan & blue
-- 47: fan led only on: blinks green & yellow
-
+- 65: fan led only on: blinks orange
+- 66: fan led only on: blinks yellow
+- 67: fan led only on: blinks green
+- 68: fan led only on: blinks cyan
+- 69: fan led only on: blinks blue
+- 70: fan led only on: blinks pink
+- 71: fan led only on: blinks orange
+- 72: fan led only on: blinks blue & pink
+- 73: fan led only on: blinks cyan & purple
+- 74: fan led only on: blinks cyan & orange
+- 75: fan led only on: blinks blue & pink
+- 76: fan led only on: blinks cyan & purple
+- 77: fan led only on: blinks cyan & orange
+- 78: fan led only on: blinks cyan & blue
+- 79: fan led only on: blinks green & yellow
 - 80: all off
 - 96: back, upper, lower - pink
 - 97: back, upper, lower - orange
