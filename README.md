@@ -96,6 +96,29 @@ This may require a factory reset/data wipe afterwards
 - `adb devices` should show a sideload device
 - `adb sideload .\NX729J-update.zip` will upload and flash the OTA
 
+### LED control (like an api)
+
+The shoulder button and back side LED's can be controlled manually using system hooks (settings):  
+Android has 3 Types of settings sotres, where apps store their states (e.g. `device_name`).  
+  - Global settings (can be modified with root, ot after granting `WRITE_SECURE_SETTINGS` using adb for the controlling app)
+  - Secure settings (can be modified with root, ot after granting `WRITE_SECURE_SETTINGS` using adb for the controlling app)
+  - System settings (modification requires higher privileges, like root or `WRITE_SETTINGS + User Consent`)
+
+To modify the led on/off state and color, only global settings need to be modified.
+
+- Download and open the app **Settings Database Editor** by team NetVor (apk available in this repo)
+- Connect the phone to a pc, grant `WRITE_SECURE_SETTINGS` using adb with the app's instructions
+- Go to Android settings, theme and personalization, light strip setting
+- Enable `Light strip setting`
+- Turn off all categories except for `Media Atmeosphere LED`
+- go back to the database editor app's global table
+  - Modify `switch_video_malp_enable` to either 0 or 1 to turn the led's on or off
+  - Modify `nubia_media_lamp_mode` to a number from the led colors markdown file in this repo (docs for RM9P) to e.g. 99
+- To permanently keep the led on, media needs to be constantly running, wwith e.g.
+  - A Task in Tasker app, that plays a blank mp3 file (no sound, 30 seconds long) periodically (e.g. every 10 seconds)
+  - Action: Play Ringtone, Type: Ringer, Sound: (magnifier, choose "none", textfield enter "silence"), Stream: Media
+- The led's should now be always on, not interfering with any other audio/phone calls
+
 ## Troubleshooting 
 
 ### Connection issues
