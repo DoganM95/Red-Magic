@@ -100,8 +100,8 @@ This may require a factory reset/data wipe afterwards
 
 The shoulder button and back side LED's can be controlled manually using system hooks (settings):  
 Android has 3 Types of settings sotres, where apps store their states (e.g. `device_name`).  
-  - Global settings (can be modified with root, ot after granting `WRITE_SECURE_SETTINGS` using adb for the controlling app)
-  - Secure settings (can be modified with root, ot after granting `WRITE_SECURE_SETTINGS` using adb for the controlling app)
+  - Global settings (can be modified with root, or after granting `WRITE_GLOBAL_SETTINGS` using adb for the controlling app)
+  - Secure settings (can be modified with root, or after granting `WRITE_SECURE_SETTINGS` using adb for the controlling app)
   - System settings (modification requires higher privileges, like root or `WRITE_SETTINGS + User Consent`)
 
 To modify the led on/off state and color, only global settings need to be modified.
