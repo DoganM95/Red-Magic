@@ -13,8 +13,8 @@ here is the phones already owned (✅) & documented and those requiring fundrais
 
 - Red Magic 11 Pro ❌ - 0 of 800 € raised
 - Red Magic 10 Pro ❌ - 0 of 800 € raised
-- Red Magic 9 Pro ✅
-- Red Magic 8 Pro ✅
+- Red Magic 9 Pro  ❌ - 0 of 650 € raised (cannot root my daily driver, so additional hardware required)
+- Red Magic 8 Pro  ✅
 
 # Table of contents
 - [Red Magic (general)](#red-magic-general)
