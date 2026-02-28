@@ -1,12 +1,13 @@
 This is a root/flash/unbrick guide for Nubia devices i have laying around and comes with absolutely no warranty.  
 The steps are partially tested, partially recreated from what i remember worked for me, use at your own risk.
 
-
 # Sponsor this project
 
 Multiple people have asked for extension of this guide to support later models than those i currently own. To create guides for models 
 not docuemnted here, you can fund this project by sponsoring it. I will buy the models and extend this guide supporting those phones, 
 as far as possible of course (if the bootloader is not unlockable etc, there is nothing i can do), but i will do my best.
+If you want to help fund hardware for this project, you can donate via PayPal here: [PayPal.me/doganm95](https://paypal.me/dogan95).
+Don't forget to mention the model you are sponsoring (with any amount you want) in the donation.
 
 here is the phones already owned (✅) & documented and those requireing fundraising (❌)
 
