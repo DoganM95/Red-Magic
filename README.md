@@ -9,7 +9,7 @@ as far as possible of course (if the bootloader is not unlockable etc, there is 
 If you want to help fund hardware for this project, you can donate via PayPal here: [PayPal.me/doganm95](https://paypal.me/dogan95).
 Don't forget to mention the model you are sponsoring (with any amount you want) in the donation.
 
-here is the phones already owned (✅) & documented and those requireing fundraising (❌)
+here is the phones already owned (✅) & documented and those requiring fundraising (❌)
 
 - Red Magic 11 Pro ❌ - 0 of 800 € raised
 - Red Magic 10 Pro ❌ - 0 of 800 € raised
