@@ -1,19 +1,6 @@
 This is a root/flash/unbrick guide for Nubia devices i have laying around and comes with absolutely no warranty.  
 The steps are partially tested, partially recreated from what i remember worked for me, use at your own risk.
 
-# Sponsoring
-
-Multiple people have asked for extension of this guide to support later models than those i currently own. To create guides for models 
-not docuemnted here, you can fund this project by sponsoring it. I will buy the models and extend this guide supporting those phones, 
-as far as possible of course (if the bootloader is not unlockable etc, there is nothing i can do), but i will do my best.
-If you want to help fund hardware for this project, you can donate via PayPal here: [PayPal.me/doganm95](https://paypal.me/dogan95).
-Don't forget to mention the model you are sponsoring (with any amount you want) in the donation.
-
-- Red Magic 11 Pro - 0 of 800 € raised
-- Red Magic 10 Pro - 0 of 800 € raised
-- Red Magic 9 Pro - 0 of 650 € raised (cannot root my daily driver, so additional hardware required)
-- Red Magic 8 Pro ✅
-
 # Table of contents
 - [Red Magic (general)](#red-magic-general)
 - [Red Magic 9 Pro specific](#red-magic-9-pro)
